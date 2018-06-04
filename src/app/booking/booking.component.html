@@ -1,0 +1,155 @@
+
+<form action="">
+  <div class="form-group">
+    <h3 class="heading"> Wellcome to Shonies Hotel</h3>
+    <div class="controls">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" class="floatLabel" name="name" (blur)="inputName($event)" #name ><br>
+<br>
+      <label for="name">Surname</label><br>
+      <input type="text" id="name" class="floatLabel" surname="surname"(blur)="inputSurname($event)" #surname><br>
+    </div>
+    <label for="name">ID Number</label><br>
+    <input type="text" id="name"  name="name"(blur)="inputIdnumber($event)" #idnumber><br>
+    <div class="controls">
+<br>
+    <label for="email">Email</label><br>
+      <input type="text" id="email" class="floatLabel" name="email"(blur)="inputEmail($event)" #email><br>
+    </div>
+<br>
+    <div class="controls">
+        <label for="phone">Phone Number</label><br>
+      <input type="tel" id="phone" class="floatLabel" name="phone"(blur)="inputPhonenumber($event)" #phonenumber ><br>
+     <br>
+    </div>
+
+      <div class="form-group">
+        <div class="col-2-3">
+          <div class="controls">
+              <label for="street">Street Name</label><br>
+           <input type="text" id="street" class="floatLabel" name="street"(blur)="inputStreetName($event)" #streetname><br>
+          <br>
+          </div>          
+        </div>
+
+        <div class="col-1-3">
+          <div class="controls">
+              <label for="street-number">Number</label><br>
+            <input type="number" id="street-number" class="floatLabel" name="street-number"(blur)="inputNumber($event)" #number><br>
+         <br>
+          </div>          
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-2-3">
+          <div class="controls">
+              <label for="city">City</label><br>
+            <input type="text" id="city" class="floatLabel" name="city"(blur)="inputCity($event)" #city><br>
+           <br>
+          </div>         
+        </div>
+
+        <div class="col-1-3">
+          <div class="controls">
+              <label for="post-code">Address </label><br>
+            <input type="text" id="post-code" class="floatLabel" name="post-code"(blur)="inputAdress($event)" #address><br>
+          <br>
+          </div>         
+        </div>
+      </div>
+
+      <div class="controls">
+          <label for="country">Country</label><br>
+        <input type="text" id="country" class="floatLabel" name="country"(blur)="inputCountry($event)" #country><br>
+    <br>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <h2 class="heading">Details</h2>
+    <div class="grid">
+    <div class="col-1-4 col-1-4-sm">
+      <div class="controls">
+          <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive Date</label><br>
+        <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>"><br>
+        <br>
+      </div>      
+    </div>
+    <div class="col-1-4 col-1-4-sm">
+      <div class="controls">
+          <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart Date</label><br>
+        <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" /><br>
+       <br>
+      </div>      
+    </div>
+      </div>
+      <div class="grid">
+    <div class="col-1-3 col-1-3-sm">
+      <div class="controls">
+        <i class="fa fa-sort"></i> People<br>
+        <br>
+        <select class="floatLabel">
+        <br>
+          <option value="blank"></option>
+          <br>
+          <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People1</label><br>
+          <br>
+          <option value="1">1</option><br>
+          <br>
+          <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People2</label><br>
+          <br>
+          <option value="2" selected>2</option><br>
+<br>
+          <option value="3">3</option><br>
+          <br>
+        </select><br>Room
+        <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;</label><br>
+        <br>
+      </div>      
+    </div>
+    <div class="col-1-3 col-1-3-sm">
+    <div class="controls">
+      <i class="fa fa-sort"></i>
+      <select class="floatLabel">
+        <option value="blank"></option><br>
+        <option value="deluxe" selected>With Bathroom</option>
+        <option value="Zuri-zimmer">Without Bathroom</option>
+        <option value="Zuri-zimmer">With Shower</option>
+        <option value="Zuri-zimmer">Without Shower</option>
+      </select>
+      <label for="fruit"></label>
+     </div>     
+    </div>
+<br>
+    <div class="col-1-3 col-1-3-sm">
+    <div class="controls">
+      <i class="fa fa-sort"></i>Bedding<br>
+      <select class="floatLabel">
+        <option value="blank"></option>
+        <option value="blank">Single</option>
+        <option value="single-bed">King</option>
+        <option value="double-bed" selected>Queen</option>
+      </select>
+      <label for="fruit"></label>
+     </div>     
+    </div>
+      
+     </div>
+      <div class="grid">
+        <p class="info-text">Please describe your needs e.g. Extra beds, Baby Walker, High Chairs,Stroller, children's cots</p>
+        <br>
+        <div class="controls">
+          <textarea name="comments" class="floatLabel" id="comments"></textarea>
+          <label for="comments">Comments</label>
+          </div>
+            
+          
+        <button  type="submit"  a routerLink="/confirmation" (click)="confirm(name.value,surname.value,idnumber,email.value,phonenumber.value,streetname.value,number.value,city.value)">Send now</button>
+            
+      </div>  
+  </div> 
+  
+
+
+</form>
+

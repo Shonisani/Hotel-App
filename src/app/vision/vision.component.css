@@ -1,0 +1,6 @@
+div {
+    background-image: url("../../assets/hotel-pool.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800vh;
+}

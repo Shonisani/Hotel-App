@@ -1,0 +1,6 @@
+div {
+    background-image: url("../../assets/galary.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800vh;
+}

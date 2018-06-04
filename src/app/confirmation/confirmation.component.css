@@ -1,0 +1,7 @@
+div{
+    background-image: url("../../assets/Unast.jpg");
+    background-size: cover;
+    height: 800vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
